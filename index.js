@@ -1,5 +1,4 @@
 var Server = require('bittorrent-tracker').Server
-
 var server = new Server({
   udp: false, // enable udp server? [default=true]
   http: true, // enable http server? [default=true]
@@ -43,14 +42,20 @@ server.on('warning', function (err) {
   console.log(err.message)
 })
 
-server.on('listening', function () {
-  // fired when all requested servers are listening
-  console.log('listening on http port:' + server.http.address().port)
-  console.log('listening on udp port:' + server.udp.address().port)
-})
+var onlistening = function () {
+    // fired when all requested servers are listening
+    console.log('listening on http port:' + server.http.address().port)
+    console.log('listening on udp port:' + server.udp.address().port)
+};
+
+// server.on('listening', function () {
+//   // fired when all requested servers are listening
+//   console.log('listening on http port:' + server.http.address().port)
+//   console.log('listening on udp port:' + server.udp.address().port)
+// })
 
 // start tracker server listening! Use 0 to listen on a random free port.
-server.listen(port, hostname, onlistening)
+server.listen(6604, "kima.duckdns.org", onlistening)
 
 // listen for individual tracker messages from peers:
 
@@ -62,14 +67,14 @@ server.on('complete', function (addr) {})
 server.on('update', function (addr) {})
 server.on('stop', function (addr) {})
 
-// get info hashes for all torrents in the tracker server
-Object.keys(server.torrents)
+// // get info hashes for all torrents in the tracker server
+// Object.keys(server.torrents)
 
-// get the number of seeders for a particular torrent
-server.torrents[infoHash].complete
+// // get the number of seeders for a particular torrent
+// server.torrents[infoHash].complete
 
-// get the number of leechers for a particular torrent
-server.torrents[infoHash].incomplete
+// // get the number of leechers for a particular torrent
+// server.torrents[infoHash].incomplete
 
-// get the peers who are in a particular torrent swarm
-server.torrents[infoHash].peers
+// // get the peers who are in a particular torrent swarm
+// server.torrents[infoHash].peers

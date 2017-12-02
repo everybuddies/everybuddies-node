@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/everybuddies/everybuddies-node/issues"
   },
-  "homepage": "https://github.com/everybuddies/everybuddies-node#readme"
+  "homepage": "https://github.com/everybuddies/everybuddies-node#readme",
+  "dependencies": {
+    "bittorrent-tracker": "^9.2.4"
+  }
 }
