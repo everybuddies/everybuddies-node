@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 var config = global.config = require('./config.js');
 var port = config.port;
-var initRootRouter = require('./routes/router.js')();
+var initRootRouter = require('./routes')();
 
 app.use(express.static(__dirname + '/../dist'));
 app.use(bodyParser.urlencoded({ extended: false }));

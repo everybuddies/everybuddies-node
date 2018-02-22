@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/everybuddies/everybuddies-node/issues"
   },
-  "homepage": "https://github.com/everybuddies/everybuddies-node#readme"
+  "homepage": "https://github.com/everybuddies/everybuddies-node#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
