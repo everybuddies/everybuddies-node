@@ -1,5 +1,5 @@
 var router = require('express').Router();
-var response = require(global.appPath.modules + '/response.js');
+var response = require('modules/response.js');
 var allowCrossDomain = function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
@@ -8,10 +8,9 @@ var allowCrossDomain = function (req, res, next) {
     next();
 };
 
-
 module.exports = function () {
     router.use(allowCrossDomain);
-    require('./api/router.api.js')(router);
+    require('routes/api')(router);
 
     return router;
 };
