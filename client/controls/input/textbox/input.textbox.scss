@@ -1,0 +1,21 @@
+$transition-duration: 250ms;
+.ui-input.ui-input-textbox {
+    display: flex;
+    .ui-input-placeholder {
+        // visibility: visible;
+        // transition-property: visibility, opacity;
+        // transition-delay: 0ms, 0ms;
+        // transition-duration: 0ms, $transition-duration;
+        // transition-timing-function: linear, ease-out;
+        display: flex;
+        flex: none;
+        align-items: center;
+        // opacity: 1;
+        .ui-input-icon {
+            color: #777;
+        }
+    }
+    input {
+        flex: 1;
+    }
+}

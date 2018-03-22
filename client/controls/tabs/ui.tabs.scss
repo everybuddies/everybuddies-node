@@ -1,0 +1,21 @@
+@import "ui.tabs.default.scss";
+.ui-tabs {
+    &>.ui-tabs-labels {
+        display: flex;
+        &>button {
+            flex: none;
+            &.active {
+                background-color: grey;
+            }
+        }
+        overflow-y: auto;
+    }
+    &>.ui-tabs-panels {
+        &>.ui-tabs-panel {
+            &.active {
+                display: block;
+            }
+            display: none;
+        }
+    }
+}

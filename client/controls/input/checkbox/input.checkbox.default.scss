@@ -1,0 +1,33 @@
+@import "~themes/theme.default.consts.scss";
+$width: 16pt;
+$height: $width;
+$padding: 4pt;
+$background-color: transparent;
+$background-color-checked: green;
+$border: $input-border;
+$border-color-hover: $input-text-hover-border-color;
+$color: $color-black;
+$icon-check: $icon-check;
+.theme-default .ui-input.ui-input-checkbox {
+    label {
+        width: $width;
+        height: $width;
+        padding: $padding;
+        border: $border;
+        input[type="checkbox"]+.ui-input-box {
+            background-color: $background-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: $width + $padding;
+            font-family: dondejerry-icons-normal;
+            color: $color-black;
+        }
+        &:hover {
+            border-color: $border-color-hover;
+        }
+        input[type="checkbox"]:checked+.ui-input-box:before {
+            content: "\F101";
+        }
+    }
+}

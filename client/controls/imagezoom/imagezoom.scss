@@ -1,0 +1,18 @@
+.ui-imagezoom {
+    position: relative;
+    img {
+        position: relative;
+    }
+    .ui-imagezoom-viewport {
+        visibility: hidden;
+        position: absolute;
+        pointer-events: none;
+        border: 1pt solid purple;
+        box-sizing: border-box;
+    }
+    &:hover {
+        .ui-imagezoom-viewport {
+            visibility: visible;
+        }
+    }
+}

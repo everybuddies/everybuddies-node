@@ -1,0 +1,45 @@
+@import "~themes/theme.default.consts.scss";
+.theme-default .ui-select {
+    &>.output {
+        display: flex;
+        align-items: center;
+        &>ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 4px 4px 0;
+            li {
+                border: 1pt solid #5151FF;
+                margin: 4px 0 0 4px;
+                flex: none;
+            }
+        }
+    }
+    &>.input {
+        background-color: white;
+        height: 320px;
+        overflow-y: scroll;
+        border: $box-border;
+        box-shadow: $box-shadow;
+        padding: $box-padding;
+        &>ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            li {
+                &.item {
+                    &:hover {
+                        border: 1pt solid #515151;
+                    }
+                    &.selected {
+                        border: 1pt solid #5151FF;
+                    }
+                    cursor: pointer;
+                    border: 1pt solid transparent;
+                    margin: 4px;
+                    flex: none;
+                }
+            }
+        }
+    }
+}

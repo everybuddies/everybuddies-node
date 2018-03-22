@@ -1,0 +1,78 @@
+$header-height: 100pt;
+$gallary-item-active-border-color: purple;
+$gallary-item-border: 1pt solid transparent;
+$gallery-width: 160pt;
+#view-item {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    .gallery {
+        height: 100%;
+        overflow-x: auto;
+        flex: none;
+        width: $gallery-width;
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: nowrap;
+            height: 0;
+            li {
+                position: relative;
+                border: $gallary-item-border;
+                &.active {
+                    border-color: $gallary-item-active-border-color;
+                }
+                img {
+                    display: inline-block;
+                    vertical-align: bottom;
+                    max-width: 100%;
+                }
+                .viewport {
+                    position: absolute;
+                    box-sizing: border-box;
+                    border: 1pt solid purple;
+                    pointer-events: none;
+                    display: none;
+                }
+                &:hover {
+                    .viewport {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        .description {
+            flex: none;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            overflow-y: auto; // max-height: $header-height;
+            max-width: 200pt;
+            h1 {
+                font-size: 1em; // font
+            }
+            p {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        }
+        .image {
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            canvas {
+                height: 100%;
+                width: 100%;
+                display: inline-block;
+                vertical-align: bottom
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "input.checkbox.default.scss";
+.ui-input.ui-input-checkbox {
+    position: relative;
+    label {
+        display: inline-block;
+        vertical-align: bottom;
+    }
+    input[type="checkbox"] {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+    input[type="checkbox"]+.ui-input-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+}

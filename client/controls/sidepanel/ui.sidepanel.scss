@@ -1,0 +1,19 @@
+@import "ui.sidepanel.default.scss";
+.ui-sidepanel {
+    position: relative;
+    overflow: hidden;
+    &>.ui-sidebar-body {
+        position: absolute;
+        height: 100%;
+    }
+    &.openright {
+        &>.ui-sidebar-body {
+            left: 0;
+        }
+    }
+    &.openleft {
+        &>.ui-sidebar-body {
+            right: 0;
+        }
+    }
+}

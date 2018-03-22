@@ -1,0 +1,72 @@
+$phi: 1.618033988;
+//colors
+$color-black: #515151;
+$color-white1: #fafafa;
+$color-black-alpha: rgba(0, 0, 0, 0.8);
+$color-blue-alpha: rgba(0, 128, 255, 0.25);
+$color-grey-alpha: rgba(128, 128, 128, 0.25);
+// $color-blue-light: #88aaff;
+$color-blue: #0088FF;
+$color-blue-light: #5588ff;
+$color-blue-dark: #004488;
+$color-grey-dark: #444444;
+$color-grey: #777777;
+$padding: 6pt;
+//
+$body-font-size: 12pt;
+//border
+$border-radius: 3pt;
+$border-color: $color-blue;
+$border-style: solid;
+$border-width: 1pt;
+$border: $border-width $border-style $border-color;
+$borderWhite: $border-width $border-style $color-white1;
+$background-input: white;
+//label
+$label-padding: $padding;
+//input
+$input-border-color: transparent;
+$input-border-style: $border-style;
+$input-border-width: $border-width;
+$input-border: $input-border-width $input-border-style $input-border-color;
+$input-border-radius: 0;
+$input-hover-background-color: $color-blue;
+$input-background-color: transparent;
+$input-hover-border-color: $color-blue;
+$input-focus-border-color: $color-blue-dark;
+$input-color: $color-black;
+$input-padding: $padding;
+//input-text
+$input-text-border-color: transparent;
+$input-text-border-style: $border-style;
+$input-text-border-width: $border-width;
+$input-text-border: $input-border-width $input-border-style $input-border-color;
+$input-text-border-radius: 0;
+$input-text-hover-background-color: $color-blue;
+$input-text-background-color: transparent;
+$input-text-hover-border-color: $color-blue-alpha;
+$input-text-focus-border-color: $color-blue-dark;
+$input-text-color: $color-black;
+$input-text-padding: $padding;
+//button
+$button-border-color: transparent;
+$button-border-style: $border-style;
+$button-border-width: $border-width;
+$button-border: $input-border-width $input-border-style $input-border-color;
+$button-border-radius: 0;
+$button-color: $color-blue-dark;
+$button-padding: 4pt;
+$button-label-padding: 4pt 4pt calc(4pt + 0.4em) 4pt;
+$button-background-color: transparent;
+$button-hover-background-color: $color-blue-alpha;
+$button-hover-border-color: transparent;
+$button-focus-border-color: $color-blue-dark;
+$button-disabled-color: $color-grey;
+$button-disabled-hover-background-color: transparent;
+//box
+$box-padding: 4pt;
+$box-shadow: 0 0 4pt $color-black;
+$box-border: $border-width $border-style $border-color;
+$box-background: white;
+//icons
+$icon-check: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPiAgICA8cGF0aCBkPSJNOSAxNi4xN0w0LjgzIDEybC0xLjQyIDEuNDFMOSAxOSAyMSA3bC0xLjQxLTEuNDF6Ii8+PC9zdmc+);

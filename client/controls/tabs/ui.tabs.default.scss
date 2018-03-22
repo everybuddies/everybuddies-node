@@ -1,0 +1,15 @@
+@import "~themes/theme.default.consts.scss";
+.theme-default .ui-tabs {
+    &>.ui-tabs-labels {
+        background-color: $color-blue;
+        &>button {
+            color: white;
+            &.active {
+                background-color: $color-blue-dark;
+            }
+            &:hover {
+                background-color: $color-blue-alpha;
+            }
+        }
+    }
+}

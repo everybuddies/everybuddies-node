@@ -1,0 +1,81 @@
+@import "theme.default.consts.scss";
+body.theme-default {
+    font-family: 'Muli';
+    font-size: $body-font-size;
+}
+
+.theme-default {
+    .font-icons {
+        font-size: 16pt;
+        line-height: 1;
+    }
+    table {
+        border: none;
+        border-collapse: collapse;
+        border-spacing: 0px;
+    }
+    input {
+        font-family: "Muli";
+        font-size: initial;
+        padding: $input-padding;
+        border: $input-border;
+        margin: 0;
+        height: 1em;
+        line-height: 1em;
+    } // input[type="number"] {
+    //     &::-webkit-inner-spin-button,
+    //     &::-webkit-outer-spin-button {
+    //         appearance: none;
+    //     }
+    // }
+    input[type="text"],
+    input[type="number"] {
+        font-size: initial;
+        padding: $input-text-padding;
+        border: $input-text-border;
+        margin: 0;
+        line-height: 1em;
+        &:hover {
+            border-color: $input-text-hover-border-color;
+        }
+    }
+    label {
+        font-size: initial;
+        margin: 0;
+        padding: $label-padding;
+        line-height: 1em;
+        display: inline-block;
+    }
+    button {
+        font-family: "Muli";
+        font-size: initial;
+        background-color: $button-background-color;
+        border: $button-border;
+        color: $button-color;
+        padding: $button-padding;
+        &:disabled {
+            color: $button-disabled-color;
+            &:hover {
+                color: $button-disabled-color;
+                background-color: $button-disabled-hover-background-color;
+            }
+        }
+        &:hover {
+            background-color: $button-hover-background-color;
+        }
+        &:focus {
+            border-color: $button-focus-border-color;
+        }
+        &.font-icons {
+            padding: 2pt;
+        }
+    }
+    ul {
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
+        li {
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import "~themes/theme.default.consts.scss";
+$border-color: #aaaaaa;
+.theme-default .ui-dropdown {
+    &>.ui-dropdown-panel {
+        border: $border-color;
+        box-shadow: $box-shadow;
+        padding: 0;
+        background-color: $box-background;
+    }
+}

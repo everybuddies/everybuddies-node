@@ -1,0 +1,44 @@
+@import "ui.dropdown.default.scss";
+.ui-dropdown {
+    display: flex;
+    position: relative;
+    .ui-dropdown-content {
+        display: flex;
+    }
+    &.dropdown>.ui-dropdown-panel {
+        top: 100%;
+    }
+    &.dropup>.ui-dropdown-panel {
+        bottom: 100%;
+    }
+    &.dropleft>.ui-dropdown-panel {
+        right: 100%;
+    }
+    &.dropright>.ui-dropdown-panel {
+        left: 100%;
+    }
+    &.open {
+        &>.ui-dropdown-panel {
+            visibility: visible;
+            opacity: 1;
+        }
+        &>.ui-dropdown-backdrop {
+            display: block;
+        }
+    }
+    &>.ui-dropdown-panel {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        z-index: 2;
+    }
+    &>.ui-dropdown-backdrop {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: none;
+        z-index: 1
+    }
+}

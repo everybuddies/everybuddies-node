@@ -1,0 +1,40 @@
+@import "theme.default.consts.scss";
+#tagger-legend .ui-sidebar-body {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    h1 {
+        flex: none;
+        padding: 0;
+        margin: 0;
+        background-color: $color-blue-dark;
+        display: flex;
+        flex-direction: row;
+        .title {
+            flex: 1;
+            padding: 6pt;
+            text-align: center;
+            line-height: 1;
+            color: white;
+            font-weight: normal;
+        }
+        button {
+            color: white;
+            flex: none;
+        }
+    }
+    ul {
+        flex: 1;
+        overflow-y: scroll;
+        li {
+            img {
+                width: 100%;
+                display: inline-block;
+                vertical-align: bottom;
+            }
+            margin-top: 6pt;
+        }
+    }
+    background-color: white;
+}

@@ -1,0 +1,51 @@
+@import "ui.select.default.scss";
+.ui-select {
+    position: relative;
+    &.open {
+        &>.input {
+            visibility: visible;
+        }
+    }
+    &.dropdown>.input {
+        top: 100%;
+    }
+    &.dropup>.input {
+        bottom: 100%;
+    }
+    &>.input {
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+// select {
+//     width: 100%;
+//     height: 320px;
+//     optgroup {
+//         display: flex;
+//         align-items: center;
+//         flex-wrap: wrap;
+//         option {
+//             &::before {
+//                 content: '';
+//             }
+//         }
+//     }
+//     option {
+//         cursor: pointer;
+//         border: 1pt solid transparent;
+//         border-radius: 3px;
+//         padding: 4px 6px 4px 6px;
+//         margin: 4px;
+//         flex: none;
+//         &:hover {
+//             border: 1pt solid #aaaaaa;
+//         }
+//         &:checked {
+//             border: 1pt solid #5151FF;
+//             background-color: blue;
+//             color: white;
+//         }
+//     }
+// }
